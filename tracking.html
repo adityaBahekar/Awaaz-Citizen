@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Awaaz — Ticket Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="theme.js"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#2b7cee",
+                    "background-light": "#f6f7f8",
+                    "background-dark": "#101822",
+                },
+                fontFamily: {
+                    "display": ["Public Sans", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-100 antialiased selection:bg-primary/30">
+<!-- Mobile Container -->
+<div class="max-w-md mx-auto min-h-screen bg-background-light dark:bg-background-dark relative shadow-2xl flex flex-col awaaz-fade-in">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3 flex items-center justify-between">
+<a href="activity.html" class="p-2 -ml-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300 no-underline flex items-center justify-center">
+<span class="material-icons-outlined">arrow_back_ios_new</span>
+</a>
+<h1 class="text-base font-bold text-center">Ticket Details</h1>
+<button class="p-2 -mr-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+<span class="material-icons-outlined">more_horiz</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<main class="flex-1 overflow-y-auto pb-24 no-scrollbar">
+<!-- Hero Section -->
+<div class="p-4">
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 overflow-hidden card-interactive">
+<!-- Image -->
+<div class="relative h-48 w-full bg-slate-200 dark:bg-slate-800">
+<img alt="Overflowing garbage bin on street corner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVa84G_REPFoRVntyuhlg0LvpEruVrw375GdHO5G1FmZkHXGb_SKaTd-a-dy6L-PHmmgxpl2lEr9nUEaFCLlEUdCzDxpN6H3Y8wYaLse2LgvaQRer6BxwghxFJvXMaI2ZYwKWyDK9tzz8kQO7op8ppCFcXtsjukGRnlwejEjZtAwVfY5qePNRHc4YzvnOnGRZzbwueAY57tdy9_UxixYTSlbYgIzhJDqqrGYVwhEx8abr0VbiZEcOhJdY44eT38sYpwrzmGEVofWo"/>
+<div class="absolute bottom-3 left-3 bg-red-100 dark:bg-red-900/40 text-red-700 dark:text-red-300 text-xs font-bold px-2 py-1 rounded border border-red-200 dark:border-red-800 badge-glow-red">
+    High Priority
+</div>
+</div>
+<!-- Summary -->
+<div class="p-4 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+    <h2 class="text-lg font-bold leading-tight">Garbage Collection Pending</h2>
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">ID: #GRV-2023-892</p>
+</div>
+<span class="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded badge-glow-blue">Open</span>
+</div>
+<div class="flex items-center text-sm text-slate-600 dark:text-slate-300">
+<span class="material-icons-outlined text-lg mr-1.5 text-slate-400">location_on</span>
+<span class="truncate">Main St, Sector 4, Civic Center</span>
+</div>
+<div class="flex items-center text-sm text-slate-600 dark:text-slate-300">
+<span class="material-icons-outlined text-lg mr-1.5 text-slate-400">calendar_today</span>
+<span>Submitted on Oct 20, 10:30 AM</span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Tracking Timeline -->
+<div class="px-4 pb-2">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 ml-1">Tracking Status</h3>
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 p-5">
+<div class="relative pl-2">
+<!-- Vertical Line -->
+<div class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-slate-200 dark:bg-slate-800 timeline-line"></div>
+<!-- Step 1: Reported -->
+<div class="relative flex items-start mb-6 group">
+<div class="absolute left-0 mt-1 w-4 h-4 rounded-full bg-primary border-2 border-white dark:border-slate-900 z-10 flex items-center justify-center">
+    <span class="material-icons-outlined text-[10px] text-white">check</span>
+</div>
+<div class="ml-8">
+    <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Report Submitted</h4>
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Oct 20, 10:30 AM</p>
+</div>
+</div>
+<!-- Step 2: Categorized -->
+<div class="relative flex items-start mb-6 group">
+<div class="absolute left-0 mt-1 w-4 h-4 rounded-full bg-primary border-2 border-white dark:border-slate-900 z-10 flex items-center justify-center">
+    <span class="material-icons-outlined text-[10px] text-white">check</span>
+</div>
+<div class="ml-8">
+    <h4 class="text-sm font-semibold text-slate-900 dark:text-white">Categorized</h4>
+    <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Oct 20, 02:15 PM</p>
+</div>
+</div>
+<!-- Step 3: Assigned (Active) -->
+<div class="relative flex items-start mb-6">
+<div class="absolute left-[-2px] mt-0.5 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center z-10">
+    <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="ml-8">
+    <h4 class="text-sm font-bold text-primary">Assigned to Official</h4>
+    <p class="text-xs text-primary/80 mt-0.5">Sanitation Dept. • Today, 09:00 AM</p>
+    <div class="mt-2 p-2 bg-primary/5 rounded border border-primary/10 flex items-center gap-3">
+        <div class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden flex-shrink-0">
+            <img alt="Portrait of assigned official" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSRTJgF3qyUmucWlBLP-L4Zwi44do98eENpAYGcEg0f8K-nayaGjWiYSCGWYxEsDGcBIHDhPLlnsAYFe4YyW3Cx5TctV9bkroVJiNHuUE71TeG_Afth4THCjHNVPpjLICiwa9mPZeV3MvRUVCXCYJbchtK1bDZjlCFGONU_-CkoxnidMIDVKtjGAKqHKd2vJGngPl1_koZTRuPKD7_5PmYFLD4zfsAtrnaKAI-MvJbM3hfmwlHDdWci-28UMDjdX6L9jzTBVbp7kc"/>
+        </div>
+        <div class="flex-1 min-w-0">
+            <p class="text-xs font-bold truncate">Officer R. Sharma</p>
+            <p class="text-[10px] text-slate-500 dark:text-slate-400 truncate">Zone 4 Supervisor</p>
+        </div>
+        <button class="w-8 h-8 flex items-center justify-center rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-primary shadow-sm hover:bg-blue-50 dark:hover:bg-slate-700 transition-colors">
+            <span class="material-icons-outlined text-sm">call</span>
+        </button>
+    </div>
+</div>
+</div>
+<!-- Step 4: In Progress -->
+<div class="relative flex items-start mb-6 opacity-50">
+<div class="absolute left-0 mt-1 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-900 z-10"></div>
+<div class="ml-8">
+    <h4 class="text-sm font-semibold text-slate-600 dark:text-slate-300">Work in Progress</h4>
+</div>
+</div>
+<!-- Step 5: Resolved -->
+<div class="relative flex items-start opacity-50">
+<div class="absolute left-0 mt-1 w-4 h-4 rounded-full bg-slate-300 dark:bg-slate-600 border-2 border-white dark:border-slate-900 z-10"></div>
+<div class="ml-8">
+    <h4 class="text-sm font-semibold text-slate-600 dark:text-slate-300">Resolved</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Info Grid -->
+<div class="grid grid-cols-2 gap-4 px-4 py-2">
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col justify-between h-24 card-interactive">
+<div class="w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-primary flex items-center justify-center">
+    <span class="material-icons-outlined text-lg">apartment</span>
+</div>
+<div>
+    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wide">Department</p>
+    <p class="text-sm font-semibold">Sanitation Wing A</p>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-4 rounded-xl shadow-sm border border-primary/20 dark:border-primary/20 flex flex-col justify-between h-24 relative overflow-hidden card-interactive">
+<div class="absolute right-0 top-0 p-8 bg-primary/5 rounded-full -mr-4 -mt-4"></div>
+<div class="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center relative z-10">
+    <span class="material-icons-outlined text-lg">event_available</span>
+</div>
+<div class="relative z-10">
+    <p class="text-[10px] text-slate-500 uppercase font-bold tracking-wide">Est. Resolution</p>
+    <p class="text-sm font-bold text-primary">Oct 24, 2023</p>
+</div>
+</div>
+</div>
+
+<!-- Updates -->
+<div class="px-4 py-4">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4 ml-1">Updates</h3>
+<div class="space-y-4 mb-6">
+<!-- System Update -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0 text-slate-500">
+    <span class="material-icons-outlined text-sm">smart_toy</span>
+</div>
+<div class="flex-1 bg-white dark:bg-slate-900 p-3 rounded-lg rounded-tl-none shadow-sm text-sm border border-slate-100 dark:border-slate-800">
+    <p class="text-slate-700 dark:text-slate-300">Complaint verified and assigned automatically based on location.</p>
+    <span class="text-[10px] text-slate-400 block mt-2">System • Yesterday</span>
+</div>
+</div>
+<!-- Officer Update -->
+<div class="flex gap-3">
+<img alt="Official Avatar" class="w-8 h-8 rounded-full object-cover flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkKErSfh0IacTAL8g1swEqAKFvIUvLVFpUrThuGEvHOASPcBSCQ2hPntBUlB7atoqxtKCDsakne_5M80nl5-GSrv6JnMWkGwpZM4jRytRWb2cbd4T-p5Wdhfg5ZObgtn1TRBszOyGKEFBYU4SWA0PekVdqyZbcAx82Sp_M36cZ3C000TVmYUwMzVE25tJ_acav5Agr-kQ0IIXHT82V7FejCvSAAKGeYKScZ-m_EodrXPyupDNNxABfW6DchxzM2sz1kB4-b_T4pLY"/>
+<div class="flex-1 bg-primary/10 dark:bg-primary/5 p-3 rounded-lg rounded-tl-none shadow-sm text-sm border border-primary/10">
+    <p class="text-slate-900 dark:text-slate-100">A collection truck has been dispatched to your sector. It should be cleared by tomorrow morning.</p>
+    <span class="text-[10px] text-slate-500 dark:text-slate-400 block mt-2">Officer R. Sharma • 2 hours ago</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Bottom Action Bar -->
+<div class="absolute bottom-0 left-0 right-0 glass-nav border-t border-slate-200 dark:border-slate-800 p-4 pb-8 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
+<div class="flex gap-2 mb-4">
+<input class="flex-1 bg-slate-100 dark:bg-slate-800 border-none rounded-lg text-sm px-4 py-3 focus:ring-2 focus:ring-primary/50 text-slate-900 dark:text-white placeholder-slate-500" placeholder="Add a comment or query..." type="text"/>
+<button class="bg-primary hover:bg-primary/90 text-white rounded-lg px-4 flex items-center justify-center transition-colors active:scale-95">
+<span class="material-icons-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

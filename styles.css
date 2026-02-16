@@ -1,0 +1,219 @@
+/* ============================================
+   Awaaz MVP — Shared Styles
+   ============================================ */
+
+/* --- Base Reset & Utilities --- */
+body {
+  min-height: max(884px, 100dvh);
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar,
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* --- Safe Area (iOS notch) --- */
+.safe-top {
+  padding-top: env(safe-area-inset-top, 20px);
+}
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 20px);
+}
+
+/* --- Page Fade-In Animation --- */
+@keyframes awaazFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.awaaz-fade-in {
+  animation: awaazFadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* --- Card Hover Lift Effect --- */
+@keyframes cardPressDown {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.97); }
+  100% { transform: scale(1); }
+}
+
+.card-interactive {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), 
+              box-shadow 0.25s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.08), 
+              0 4px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.card-interactive:active {
+  animation: cardPressDown 0.3s ease;
+}
+
+/* --- Dark Mode Smooth Transitions --- */
+*, *::before, *::after {
+  transition: background-color 0.35s ease, 
+              border-color 0.35s ease, 
+              color 0.25s ease,
+              box-shadow 0.3s ease;
+}
+
+/* Exclude elements where transition causes issues */
+a, button, input, textarea, select {
+  transition: background-color 0.2s ease, 
+              border-color 0.2s ease, 
+              color 0.15s ease,
+              box-shadow 0.2s ease,
+              transform 0.15s ease,
+              opacity 0.2s ease;
+}
+
+/* --- iOS-style Toggle Switch --- */
+.toggle-switch {
+  position: relative;
+  width: 52px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  transition: background-color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.toggle-slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 9999px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background-color: #2b7cee;
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(20px);
+}
+
+/* --- Glassmorphism Bottom Nav --- */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+.dark .glass-nav {
+  background: rgba(15, 23, 42, 0.88) !important;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* --- FAB (Floating Action Button) Pulse --- */
+@keyframes fabPulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px -5px rgba(43, 124, 238, 0.4);
+  }
+  50% {
+    box-shadow: 0 10px 35px -5px rgba(43, 124, 238, 0.6);
+  }
+}
+
+.fab-pulse {
+  animation: fabPulse 2.5s ease-in-out infinite;
+}
+
+/* --- Gradient Shimmer for Hero Card --- */
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.hero-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.08) 37%,
+    transparent 63%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 4s ease-in-out infinite;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+/* --- Status Badge Glow --- */
+.badge-glow-blue {
+  box-shadow: 0 0 8px rgba(43, 124, 238, 0.2);
+}
+.badge-glow-orange {
+  box-shadow: 0 0 8px rgba(249, 115, 22, 0.2);
+}
+.badge-glow-green {
+  box-shadow: 0 0 8px rgba(22, 163, 74, 0.2);
+}
+.badge-glow-red {
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
+}
+
+/* --- Timeline Animated Line --- */
+.timeline-line {
+  transition: all 0.3s ease;
+}
+
+/* --- Bottom Home Indicator --- */
+.home-indicator {
+  transition: opacity 0.3s ease;
+}
+
+/* --- Nav Tab Active Indicator Dot --- */
+.nav-active-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: #2b7cee;
+  margin-top: 2px;
+}
+
+/* --- Prevent FOUC on dark mode --- */
+html {
+  visibility: visible;
+}

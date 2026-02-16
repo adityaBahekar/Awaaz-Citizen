@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Awaaz Citizen Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script src="theme.js"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#2b7cee",
+                    "background-light": "#f6f7f8",
+                    "background-dark": "#101822",
+                },
+                fontFamily: {
+                    "display": ["Public Sans", "sans-serif"]
+                },
+                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+            },
+        },
+    }
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased min-h-screen">
+<div class="mx-auto max-w-md bg-white dark:bg-slate-900 min-h-screen shadow-2xl relative overflow-hidden flex flex-col awaaz-fade-in">
+<!-- Status Bar -->
+<div class="h-12 w-full bg-white dark:bg-slate-900 flex justify-between items-center px-6 pt-2 select-none">
+<span class="text-xs font-semibold">9:41</span>
+<div class="flex items-center space-x-1">
+<span class="material-icons-round text-xs">signal_cellular_alt</span>
+<span class="material-icons-round text-xs">wifi</span>
+<span class="material-icons-round text-xs">battery_full</span>
+</div>
+</div>
+
+<!-- Header -->
+<header class="px-6 py-3 flex justify-between items-center bg-white dark:bg-slate-900">
+<div class="flex flex-col">
+<span class="text-sm text-slate-500 dark:text-slate-400 font-medium">Welcome back,</span>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Rahul</h1>
+</div>
+<div class="flex items-center space-x-3">
+<button class="relative p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-icons-round text-slate-600 dark:text-slate-300">notifications_none</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border border-white dark:border-slate-900"></span>
+</button>
+<a href="profile.html" class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden border-2 border-white dark:border-slate-800 shadow-sm hover:scale-105 transition-transform block">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6FEdZ3E18s9GwsKFh1dlImPak632wUWLYnlmzyoutWDEjLsdjjdxk5rhlIScPiOlj4JHjWsQKkXbqaRTZqJmd0DYkvn2reiCgblCQDNxS47B8qvouzLSyodhq5_w-9Z8kfAJR1i71hf17k7yW4wUVNu-OuOYIZApzvttOII2rrkHFVyva1SIPg5mVhJXzxfLRHSXFelzIDLyDMwBOjBYhkbvzzd7J1NRuxKr4lDOr8Ggbpeqa9Dn4emhhQLOSdyCVwUws0gZZ2Jc"/>
+</a>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-28 space-y-6">
+
+<!-- Hero Card -->
+<section class="px-6 mt-2">
+<div class="bg-gradient-to-br from-primary via-blue-500 to-blue-600 rounded-2xl p-6 shadow-lg shadow-blue-500/20 text-white relative overflow-hidden hero-shimmer">
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+<div class="absolute -left-10 -bottom-10 w-32 h-32 bg-blue-400/20 rounded-full blur-xl"></div>
+<div class="relative z-10">
+<h2 class="text-xl font-bold mb-1">Spot an issue?</h2>
+<p class="text-blue-100 text-sm mb-5 max-w-[80%] leading-relaxed">Help us improve the city. Report potholes, garbage, or water issues instantly.</p>
+<a href="step1.html" class="w-full bg-white text-primary font-bold py-3.5 px-4 rounded-xl flex items-center justify-center space-x-2 shadow-sm active:scale-[0.98] transition-all hover:bg-slate-50 no-underline">
+<span class="material-icons-round text-xl">add_a_photo</span>
+<span>Report an Issue</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- Activity List -->
+<section class="px-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Your Activity</h3>
+<a href="activity.html" class="text-sm text-primary font-semibold hover:text-blue-600 no-underline">See All</a>
+</div>
+
+<div class="flex flex-col space-y-3">
+<!-- Water Leakage -->
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer block no-underline card-interactive">
+<div class="flex items-start gap-4">
+<div class="shrink-0 w-11 h-11 bg-blue-50 dark:bg-blue-900/30 rounded-full flex items-center justify-center self-start">
+<span class="material-icons-round text-primary text-xl">water_drop</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Water Leakage</h4>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/40 text-primary dark:text-blue-300 text-[10px] font-bold uppercase tracking-wide border border-blue-100 dark:border-blue-800/50">In Progress</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-1">Main pipeline burst near Sector 4...</p>
+<div class="flex items-center text-[11px] text-slate-400 font-medium">
+<span class="mr-3">Today, 10:30 AM</span>
+<span>ID: #4021</span>
+</div>
+</div>
+</div>
+</a>
+
+<!-- Street Light -->
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer block no-underline card-interactive">
+<div class="flex items-start gap-4">
+<div class="shrink-0 w-11 h-11 bg-amber-50 dark:bg-amber-900/30 rounded-full flex items-center justify-center self-start">
+<span class="material-icons-round text-amber-500 text-xl">lightbulb</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Street Light</h4>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50">Pending</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-1">Street light flickering on Main Street...</p>
+<div class="flex items-center text-[11px] text-slate-400 font-medium">
+<span class="mr-3">Yesterday</span>
+<span>ID: #3982</span>
+</div>
+</div>
+</div>
+</a>
+
+<!-- Garbage Pickup -->
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer block no-underline card-interactive">
+<div class="flex items-start gap-4">
+<div class="shrink-0 w-11 h-11 bg-green-50 dark:bg-green-900/30 rounded-full flex items-center justify-center self-start">
+<span class="material-icons-round text-green-600 text-xl">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Garbage Pickup</h4>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold uppercase tracking-wide border border-green-100 dark:border-green-800/50">Resolved</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-1">Overflowing bin cleared at Park Avenue.</p>
+<div class="flex items-center text-[11px] text-slate-400 font-medium">
+<span class="mr-3">Last Week</span>
+<span>ID: #3501</span>
+</div>
+</div>
+</div>
+</a>
+
+<!-- Pothole Repair -->
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer block no-underline card-interactive">
+<div class="flex items-start gap-4">
+<div class="shrink-0 w-11 h-11 bg-slate-100 dark:bg-slate-700 rounded-full flex items-center justify-center self-start">
+<span class="material-icons-round text-slate-500 text-xl">edit_road</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start mb-1">
+<h4 class="text-sm font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Pothole Repair</h4>
+<span class="shrink-0 px-2 py-0.5 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50">Pending</span>
+</div>
+<p class="text-xs text-slate-500 dark:text-slate-400 mb-2 line-clamp-1">Large pothole forming near the bus...</p>
+<div class="flex items-center text-[11px] text-slate-400 font-medium">
+<span class="mr-3">2 Weeks Ago</span>
+<span>ID: #3204</span>
+</div>
+</div>
+</div>
+</a>
+</div>
+</section>
+</main>
+
+<!-- FAB -->
+<div class="fixed bottom-24 right-0 max-w-md w-full mx-auto pointer-events-none z-50" style="left:0;right:0;">
+<a href="step1.html" class="absolute right-5 w-14 h-14 bg-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center text-white active:scale-95 transition-transform no-underline pointer-events-auto">
+<span class="material-icons-round text-2xl">photo_camera</span>
+</a>
+</div>
+
+<!-- Bottom Nav -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 pb-6 pt-2.5 px-8 z-40">
+<ul class="flex justify-between items-center">
+    <li class="flex-1 flex justify-center">
+        <a class="flex flex-col items-center space-y-0.5 text-primary" href="index.html">
+            <span class="material-icons-round text-2xl">home</span>
+            <span class="text-[10px] font-semibold">Home</span>
+        </a>
+    </li>
+    <li class="flex-1 flex justify-center">
+        <a class="flex flex-col items-center space-y-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="activity.html">
+            <span class="material-icons-round text-2xl">history</span>
+            <span class="text-[10px] font-semibold">Activity</span>
+        </a>
+    </li>
+    <li class="flex-1 flex justify-center">
+        <a class="flex flex-col items-center space-y-0.5 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="profile.html">
+            <span class="material-icons-round text-2xl">person</span>
+            <span class="text-[10px] font-semibold">Profile</span>
+        </a>
+    </li>
+</ul>
+</nav>
+</div>
+
+</body></html>
