@@ -2,35 +2,54 @@
 <html lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Awaaz — Activity History</title>
+<title>Awaaz Activity History</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css" rel="stylesheet"/>
-<script src="theme.js"></script>
 <script id="tailwind-config">
-    tailwind.config = {
-        darkMode: "class",
-        theme: {
-            extend: {
-                colors: {
-                    "primary": "#2b7cee",
-                    "background-light": "#f6f7f8",
-                    "background-dark": "#101822",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b7cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
                 },
-                fontFamily: {
-                    "display": ["Public Sans", "sans-serif"]
-                },
-                borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
             },
-        },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
     }
-</script>
-</head>
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
 <body class="bg-background-light dark:bg-background-dark font-display text-slate-800 dark:text-slate-200 antialiased min-h-screen">
-<div class="mx-auto max-w-md bg-white dark:bg-slate-900 min-h-screen shadow-2xl relative overflow-hidden flex flex-col awaaz-fade-in">
-<!-- Status Bar -->
+<div class="mx-auto max-w-md bg-white dark:bg-slate-900 min-h-screen shadow-2xl relative overflow-hidden flex flex-col">
 <div class="h-12 w-full bg-white dark:bg-slate-900 flex justify-between items-center px-6 pt-2 select-none sticky top-0 z-50">
 <span class="text-xs font-semibold">9:41</span>
 <div class="flex items-center space-x-1">
@@ -39,7 +58,6 @@
 <span class="material-icons-round text-xs">battery_full</span>
 </div>
 </div>
-<!-- Header -->
 <header class="px-6 py-4 flex justify-between items-center bg-white dark:bg-slate-900 sticky top-12 z-40 border-b border-slate-50 dark:border-slate-800">
 <h1 class="text-2xl font-bold text-slate-900 dark:text-white">Activity History</h1>
 <div class="flex items-center space-x-3">
@@ -49,25 +67,21 @@
 </button>
 </div>
 </header>
-<!-- Filter Tabs -->
 <div class="px-6 py-4 bg-white dark:bg-slate-900 sticky top-[88px] z-30 shadow-sm">
 <div class="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-xl">
 <button class="flex-1 py-2 px-3 rounded-lg bg-white dark:bg-slate-700 shadow-sm text-sm font-semibold text-primary dark:text-white transition-all">
-    All
-</button>
+            All
+        </button>
 <button class="flex-1 py-2 px-3 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
-    In Progress
-</button>
+            In Progress
+        </button>
 <button class="flex-1 py-2 px-3 rounded-lg text-sm font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-all">
-    Resolved
-</button>
+            Resolved
+        </button>
 </div>
 </div>
-<!-- Activity Cards -->
 <main class="flex-1 overflow-y-auto no-scrollbar pb-32 space-y-4 px-6 pt-2">
-
-<!-- Water Leakage -->
-<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer group block no-underline card-interactive">
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow cursor-pointer group block no-underline">
 <div class="flex items-start gap-4">
 <div class="shrink-0 bg-blue-50 dark:bg-blue-900/30 p-3 rounded-xl self-start group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors">
 <span class="material-icons-round text-primary text-xl">water_drop</span>
@@ -75,7 +89,7 @@
 <div class="flex-1 min-w-0">
 <div class="flex justify-between items-start mb-1">
 <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Water Leakage</h4>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-900/40 text-primary dark:text-blue-300 text-[10px] font-bold uppercase tracking-wide border border-blue-100 dark:border-blue-800/50 badge-glow-blue">In Progress</span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-blue-50 dark:bg-blue-900/40 text-primary dark:text-blue-300 text-[10px] font-bold uppercase tracking-wide border border-blue-100 dark:border-blue-800/50">In Progress</span>
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 line-clamp-2">Main pipeline burst near Sector 4 community center entrance causing water logging.</p>
 <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-50 dark:border-slate-700/50">
@@ -85,9 +99,7 @@
 </div>
 </div>
 </a>
-
-<!-- Street Light -->
-<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer group block no-underline card-interactive">
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow cursor-pointer group block no-underline">
 <div class="flex items-start gap-4">
 <div class="shrink-0 bg-orange-50 dark:bg-orange-900/30 p-3 rounded-xl self-start group-hover:bg-orange-100 dark:group-hover:bg-orange-900/50 transition-colors">
 <span class="material-icons-round text-orange-500 text-xl">lightbulb</span>
@@ -95,7 +107,7 @@
 <div class="flex-1 min-w-0">
 <div class="flex justify-between items-start mb-1">
 <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Street Light</h4>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50 badge-glow-orange">Pending</span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50">Pending</span>
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 line-clamp-2">Street light flickering on Main Street corner, causing visibility issues for pedestrians.</p>
 <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-50 dark:border-slate-700/50">
@@ -105,9 +117,7 @@
 </div>
 </div>
 </a>
-
-<!-- Garbage Pickup -->
-<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer group block no-underline card-interactive">
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow cursor-pointer group block no-underline">
 <div class="flex items-start gap-4">
 <div class="shrink-0 bg-green-50 dark:bg-green-900/30 p-3 rounded-xl self-start group-hover:bg-green-100 dark:group-hover:bg-green-900/50 transition-colors">
 <span class="material-icons-round text-green-600 text-xl">check_circle</span>
@@ -115,7 +125,7 @@
 <div class="flex-1 min-w-0">
 <div class="flex justify-between items-start mb-1">
 <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Garbage Pickup</h4>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold uppercase tracking-wide border border-green-100 dark:border-green-800/50 badge-glow-green">Resolved</span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold uppercase tracking-wide border border-green-100 dark:border-green-800/50">Resolved</span>
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 line-clamp-2">Overflowing bin cleared at Park Avenue after user complaint #3501.</p>
 <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-50 dark:border-slate-700/50">
@@ -125,9 +135,7 @@
 </div>
 </div>
 </a>
-
-<!-- Pothole Repair -->
-<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer group block no-underline card-interactive">
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow cursor-pointer group block no-underline">
 <div class="flex items-start gap-4">
 <div class="shrink-0 bg-slate-50 dark:bg-slate-700 p-3 rounded-xl self-start group-hover:bg-slate-100 dark:group-hover:bg-slate-600 transition-colors">
 <span class="material-icons-round text-slate-500 text-xl">edit_road</span>
@@ -135,7 +143,7 @@
 <div class="flex-1 min-w-0">
 <div class="flex justify-between items-start mb-1">
 <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Pothole Repair</h4>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50 badge-glow-orange">Pending</span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-orange-50 dark:bg-orange-900/40 text-orange-600 dark:text-orange-300 text-[10px] font-bold uppercase tracking-wide border border-orange-100 dark:border-orange-800/50">Pending</span>
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 line-clamp-2">Large pothole forming near the bus stop causing traffic slowdowns during rush hour.</p>
 <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-50 dark:border-slate-700/50">
@@ -144,10 +152,8 @@
 </div>
 </div>
 </div>
-</a>
-
-<!-- Fallen Tree -->
-<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm cursor-pointer group block no-underline card-interactive">
+</div>
+<a href="tracking.html" class="bg-white dark:bg-slate-800 rounded-xl p-4 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow cursor-pointer group block no-underline">
 <div class="flex items-start gap-4">
 <div class="shrink-0 bg-purple-50 dark:bg-purple-900/30 p-3 rounded-xl self-start group-hover:bg-purple-100 dark:group-hover:bg-purple-900/50 transition-colors">
 <span class="material-icons-round text-purple-600 text-xl">park</span>
@@ -155,7 +161,7 @@
 <div class="flex-1 min-w-0">
 <div class="flex justify-between items-start mb-1">
 <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 truncate pr-2">Fallen Tree</h4>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold uppercase tracking-wide border border-green-100 dark:border-green-800/50 badge-glow-green">Resolved</span>
+<span class="shrink-0 px-2.5 py-1 rounded-full bg-green-50 dark:bg-green-900/40 text-green-700 dark:text-green-300 text-[10px] font-bold uppercase tracking-wide border border-green-100 dark:border-green-800/50">Resolved</span>
 </div>
 <p class="text-xs text-slate-500 dark:text-slate-400 mb-3 line-clamp-2">Tree branch blocking the sidewalk on 5th Avenue cleared by maintenance crew.</p>
 <div class="flex items-center justify-between text-[11px] text-slate-400 font-medium pt-2 border-t border-slate-50 dark:border-slate-700/50">
@@ -165,16 +171,11 @@
 </div>
 </div>
 </a>
-
 </main>
-
-<!-- FAB -->
-<a href="step1.html" class="absolute bottom-24 right-6 w-14 h-14 bg-primary rounded-full shadow-2xl flex items-center justify-center text-white z-50 active:scale-95 transition-transform hover:bg-blue-600 no-underline fab-pulse">
+<a href="step1.html" class="absolute bottom-24 right-6 w-14 h-14 bg-primary rounded-full shadow-2xl shadow-blue-500/40 flex items-center justify-center text-white z-50 active:scale-95 transition-transform hover:bg-blue-600 no-underline">
 <span class="material-icons-round text-2xl">photo_camera</span>
 </a>
-
-<!-- Bottom Nav -->
-<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 pb-6 pt-2.5 px-8 z-40">
+<nav class="absolute bottom-0 w-full bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800 pb-8 pt-3 px-6 z-40">
 <ul class="flex justify-between items-center px-4">
     <li class="flex-1 flex justify-center">
         <a class="flex flex-col items-center space-y-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 transition-colors" href="index.html">
@@ -183,10 +184,9 @@
         </a>
     </li>
     <li class="flex-1 flex justify-center">
-        <a class="flex flex-col items-center space-y-0.5 text-primary" href="activity.html">
+        <a class="flex flex-col items-center space-y-1 text-primary" href="activity.html">
             <span class="material-icons-round text-2xl">history</span>
             <span class="text-[10px] font-semibold">Activity</span>
-            <div class="nav-active-dot"></div>
         </a>
     </li>
     <li class="flex-1 flex justify-center">
@@ -197,9 +197,12 @@
     </li>
 </ul>
 </nav>
-
-<!-- Home Indicator -->
-<div class="fixed bottom-1.5 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-slate-300/50 dark:bg-slate-700/50 rounded-full z-50 pointer-events-none home-indicator"></div>
+<div class="absolute bottom-1.5 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-slate-300/50 dark:bg-slate-700/50 rounded-full z-50 pointer-events-none"></div>
 </div>
+<script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+    }
+</script>
 
 </body></html>
